@@ -1,0 +1,4 @@
+<input [(ngModel)]='value' (change)='onValueChanged()'>
+<select [(ngModel)]='unit' (change)='onUnitChanged()'>
+    <option *ngFor='let unitOption of units'>{{unitOption}}</option>
+</select>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'databinding';
+
+  @Input() value = 0;
+  @Input() unit: string;
+  @Input() units = ['°C', '%', 'ppm'];
+
+  @Output() valueChange = new EventEmitter<number>();
+  @Output() unitChange = new EventEmitter<string>();
 }
